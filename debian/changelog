@@ -1,3 +1,9 @@
+avahi (0.8+ix-1) unstable; urgency=medium
+
+  * expand static service config options to include interface index
+
+ -- Andrew Walker <awalker@ixsystems.com>  Wed, 01 Dec 2021 17:00:00 +0000
+
 avahi (0.8-5) unstable; urgency=medium
 
   * d/avahi-daemon.maintscript: Drop removal of symlink, they're not normal
