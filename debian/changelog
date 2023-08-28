@@ -1,3 +1,9 @@
+avahi (0.8+ix-3) unstable; urgency=medium
+
+  * Get bugfixes from upstream
+
+ -- Brian Meagher <brian.meagher@ixsystems.com>  Mon, 28 Aug 2023 17:00:00 +0000
+
 avahi (0.8+ix-1) unstable; urgency=medium
 
   * expand static service config options to include interface index
