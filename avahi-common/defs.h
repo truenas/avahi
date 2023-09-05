@@ -223,7 +223,8 @@ typedef enum {
     AVAHI_SERVER_REGISTERING,      /**< Host RRs are being registered */
     AVAHI_SERVER_RUNNING,          /**< All host RRs have been established */
     AVAHI_SERVER_COLLISION,        /**< There is a collision with a host RR. All host RRs have been withdrawn, the user should set a new host name via avahi_server_set_host_name() */
-    AVAHI_SERVER_FAILURE           /**< Some fatal failure happened, the server is unable to proceed */
+    AVAHI_SERVER_FAILURE,          /**< Some fatal failure happened, the server is unable to proceed */
+    AVAHI_SERVER_SHUTDOWN          /**< Server is in process of shutting down */
 } AvahiServerState;
 
 /** States of an entry group object */

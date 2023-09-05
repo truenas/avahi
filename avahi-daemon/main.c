@@ -414,7 +414,12 @@ static void server_callback(AvahiServer *s, AvahiServerState state, void *userda
             break;
 
         case AVAHI_SERVER_INVALID:
+        case AVAHI_SERVER_SHUTDOWN:
             break;
+
+        default:
+            avahi_log_error("%d: unknown state", state);
+            abort();
 
     }
 }
@@ -1298,6 +1303,7 @@ finish:
 #endif
 
     if (avahi_server) {
+        server_set_state(avahi_server, AVAHI_SERVER_SHUTDOWN);
         avahi_server_free(avahi_server);
         avahi_server = NULL;
     }
