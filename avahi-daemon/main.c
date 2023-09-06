@@ -1303,7 +1303,6 @@ finish:
 #endif
 
     if (avahi_server) {
-        server_set_state(avahi_server, AVAHI_SERVER_SHUTDOWN);
         avahi_server_free(avahi_server);
         avahi_server = NULL;
     }

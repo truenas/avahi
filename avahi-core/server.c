@@ -1506,6 +1506,7 @@ AvahiServer *avahi_server_new(const AvahiPoll *poll_api, const AvahiServerConfig
 void avahi_server_free(AvahiServer* s) {
     assert(s);
 
+    server_set_state(s, AVAHI_SERVER_SHUTDOWN);
     /* Remove all browsers */
 
     while (s->dns_server_browsers)
