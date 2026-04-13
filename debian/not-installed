@@ -1,0 +1,11 @@
+# avahi-client dev files - not needed, nothing builds against it on TrueNAS
+usr/include/avahi-client/*
+usr/lib/*/libavahi-client.a
+usr/lib/*/libavahi-client.so
+usr/lib/*/pkgconfig/avahi-client.pc
+
+# avahi-dnsconfd - not needed, static config only
+etc/avahi/avahi-dnsconfd.action
+lib/systemd/system/avahi-dnsconfd.service
+usr/sbin/avahi-dnsconfd
+usr/share/man/man8/avahi-dnsconfd*
