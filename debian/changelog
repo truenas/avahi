@@ -1,3 +1,20 @@
+avahi (0.8+ix-2) unstable; urgency=medium
+
+  * Cherry-pick upstream bugfixes including:
+    - CVE-2026-34933: refuse conflicting wide_area+multicast publish flags
+    - CVE-2024-52615: wide-area DNS response handling fix
+    - CVE-2023-38469: reject overly long TXT resource records
+    - CVE-2023-38471: extract hostname using avahi_unescape_label
+    - CVE-2023-38472: check rdata before parsing
+    - CVE-2023-38473: derive alt hostname from unescaped version
+    - CNAME loop detection and multiple DoS assertion fixes
+    - Use-after-free fix in avahi-browse
+    - Multiple memory safety fixes in libdns_sd and simple-protocol
+    - Correctness fixes for TXT serialization, QNAME processing,
+      char signedness, IPv6 tentative addresses, and more
+
+ -- Andrew Walker <awalker@ixsystems.com>  Mon, 13 Apr 2026 17:00:00 +0000
+
 avahi (0.8+ix-1) unstable; urgency=medium
 
   * expand static service config options to include interface index
